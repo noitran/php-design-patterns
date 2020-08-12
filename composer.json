@@ -1,0 +1,29 @@
+{
+  "name": "noitran/php-design-patterns",
+  "description": "Design pattern examples with description in PHP.",
+  "authors": [
+    {
+      "name": "Noitran.Black",
+      "email": "noitran.black@gmail.com"
+    }
+  ],
+  "keywords": [
+    "patterns",
+    "php"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "phpunit/phpunit": "^9.3",
+    "monolog/monolog": "^2.1"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Noitran\\Patterns\\": "src"
+    }
+  }
+}
