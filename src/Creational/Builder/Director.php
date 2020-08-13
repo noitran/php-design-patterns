@@ -24,6 +24,7 @@ class Director
             ->where('name', 'John')
             ->where('surname', 'Doe')
             ->limit(5)
+            ->offset(0)
             ->rawSql();
     }
 }

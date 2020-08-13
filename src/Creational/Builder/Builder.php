@@ -18,7 +18,7 @@ interface Builder
 
     public function limit(int $limit);
 
-    public function offset(int $offset = 0);
+    public function offset(int $offset);
 
     public function rawSql(): string;
 }

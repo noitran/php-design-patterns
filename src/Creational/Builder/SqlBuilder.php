@@ -41,15 +41,14 @@ abstract class SqlBuilder implements Builder
         return $this;
     }
 
-    public function limit(int $limit, int $offset = 0): SqlBuilder
+    public function limit(int $limit): SqlBuilder
     {
         $this->query->limit = $limit;
-        $this->query->offset = $offset;
 
         return $this;
     }
 
-    public function offset(int $offset = 0): SqlBuilder
+    public function offset(int $offset): SqlBuilder
     {
         $this->query->offset = $offset;
 
