@@ -17,7 +17,7 @@ class Director
         $this->queryBuilder = $queryBuilder;
     }
 
-    public function build(): Builder
+    public function build()
     {
         return $this->queryBuilder->select(['email', 'name', 'surname'])
             ->from('users')

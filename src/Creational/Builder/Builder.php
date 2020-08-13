@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Noitran\Patterns\Creational\Builder;
 
+/**
+ * Interface defines a set of methods for building sql queries. Public methods are returning
+ * SqlBuilder object in its current state for easy chaining
+ */
 interface Builder
 {
     public function select($columns = ['*']);
@@ -12,7 +16,9 @@ interface Builder
 
     public function where($column, $value = null, $operator = null);
 
-    public function limit($value);
+    public function limit(int $limit);
+
+    public function offset(int $offset = 0);
 
     public function rawSql(): string;
 }

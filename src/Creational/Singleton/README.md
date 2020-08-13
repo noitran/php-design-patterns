@@ -90,7 +90,7 @@ I wouldn't use Singleton pattern in real world. You don't need to ensure singula
 
 [The PHP League PSR11 Container](https://container.thephpleague.com/3.x/)
 
-Examples mentioned by others: `Database Connector`, `Filesystem`, `Config`, `EventDispatcher`, `Logger` and other. When application requires only one instances of class in code which will be shared over all codebase in global state.
+Examples mentioned by others: `Database Connector`, `Filesystem`, `Config`, `EventDispatcher`, `Logger` and other. When application requires only one instance of class in code which will be shared over all codebase in global state.
 
 
 
