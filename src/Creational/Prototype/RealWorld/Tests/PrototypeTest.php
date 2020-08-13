@@ -3,11 +3,11 @@
 
 declare(strict_types=1);
 
-namespace Noitran\Patterns\Creational\Prototype\Tests;
+namespace Noitran\Patterns\Creational\Prototype\RealWorld\Tests;
 
 use DateTime;
-use Noitran\Patterns\Creational\Prototype\Invoice;
-use Noitran\Patterns\Creational\Prototype\User;
+use Noitran\Patterns\Creational\Prototype\RealWorld\Invoice;
+use Noitran\Patterns\Creational\Prototype\RealWorld\User;
 use PHPUnit\Framework\TestCase;
 
 class PrototypeTest extends TestCase

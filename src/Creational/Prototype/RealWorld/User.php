@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Noitran\Patterns\Creational\Prototype;
+namespace Noitran\Patterns\Creational\Prototype\RealWorld;
 
 class User
 {
