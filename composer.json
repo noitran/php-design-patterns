@@ -17,7 +17,8 @@
     "ext-json": "*",
     "phpunit/phpunit": "^9.3",
     "monolog/monolog": "^2.1",
-    "larapack/dd": "^1.1"
+    "larapack/dd": "^1.1",
+    "psr/log": "^1.1"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master"
