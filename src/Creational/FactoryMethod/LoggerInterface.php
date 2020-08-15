@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Noitran\Patterns\Creational\FactoryMethod;
 
 /**
- * "Product" interface
+ * "Product" interface.
  *
  * The Product declares the interface, which is common to all objects
  * that can be produced by the creator and its subclasses.

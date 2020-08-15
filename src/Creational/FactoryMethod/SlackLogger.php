@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Noitran\Patterns\Creational\FactoryMethod;
 
 /**
- * Class SlackLogger - Concrete "Product" - Implementation of "Product" interface (LoggerInterface)
+ * Class SlackLogger - Concrete "Product" - Implementation of "Product" interface (LoggerInterface).
  */
 class SlackLogger implements LoggerInterface
 {

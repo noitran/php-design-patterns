@@ -11,7 +11,7 @@ class Income extends ItemPrototype
     /**
      * Class that has circular reference (References back to Invoice class)
      * https://medium.com/@johann.pardanaud/about-circular-references-in-php-10f71f811e9
-     * https://johann.pardanaud.com/blog/about-circular-references-in-php
+     * https://johann.pardanaud.com/blog/about-circular-references-in-php.
      */
     protected User $user;
 

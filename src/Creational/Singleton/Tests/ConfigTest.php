@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Noitran\Patterns\Creational\Singleton\Tests;
 
-use PHPUnit\Framework\TestCase;
 use Noitran\Patterns\Creational\Singleton\Config;
+use PHPUnit\Framework\TestCase;
 
 class ConfigTest extends TestCase
 {
     /**
      * @test
      */
-    public function itShouldTestConfigInstances(): void
+    public function it_should_test_config_instances(): void
     {
         $firstInstance = Config::getInstance();
         $secondInstance = Config::getInstance();

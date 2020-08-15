@@ -7,7 +7,7 @@ namespace Noitran\Patterns\Creational\Prototype;
 use DateTime;
 
 /**
- * https://en.wikipedia.org/wiki/Prototype_pattern
+ * https://en.wikipedia.org/wiki/Prototype_pattern.
  */
 abstract class ItemPrototype
 {

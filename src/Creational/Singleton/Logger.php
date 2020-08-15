@@ -21,7 +21,7 @@ class Logger extends Singleton
         parent::__construct();
 
         $this->logger = new Monolog('main', [
-            new StreamHandler('_logs/main.log', Monolog::DEBUG)
+            new StreamHandler('_logs/main.log', Monolog::DEBUG),
         ]);
     }
 

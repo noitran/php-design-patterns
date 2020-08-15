@@ -27,7 +27,7 @@ class LoggerFactory
         switch ($loggerType) {
             case 'stream':
                 return new Monolog($parameters['name'], [
-                    new StreamHandler($parameters['path'], Monolog::DEBUG)
+                    new StreamHandler($parameters['path'], Monolog::DEBUG),
                 ]);
             case 'slack':
                 return new Monolog($parameters['driver'], [
@@ -35,7 +35,7 @@ class LoggerFactory
                         'https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX',
                         $parameters['channel'],
                         $parameters['username']
-                    )
+                    ),
                 ]);
             default:
                 throw new RuntimeException('No such type of logger was found in system');

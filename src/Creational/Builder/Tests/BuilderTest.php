@@ -1,6 +1,5 @@
 <?php
 
-
 declare(strict_types=1);
 
 namespace Noitran\Patterns\Creational\Builder\Tests;
@@ -15,7 +14,7 @@ class BuilderTest extends TestCase
     /**
      * @test
      */
-    public function itShouldSuccessfullyOutputMysqlQuery(): void
+    public function it_should_successfully_output_mysql_query(): void
     {
         $queryBuilder = new MySqlBuilder();
         $sql = (new Director($queryBuilder))->build();
@@ -30,7 +29,7 @@ class BuilderTest extends TestCase
     /**
      * @test
      */
-    public function itShouldSuccessfullyOutputPostgresQuery(): void
+    public function it_should_successfully_output_postgres_query(): void
     {
         $queryBuilder = new PostgresBuilder();
         $sql = (new Director($queryBuilder))->build();

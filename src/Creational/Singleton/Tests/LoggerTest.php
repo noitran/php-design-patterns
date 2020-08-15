@@ -6,15 +6,15 @@ namespace Noitran\Patterns\Creational\Singleton\Tests;
 
 use Noitran\Patterns\Creational\Singleton\Exceptions\CloneNotSupportedException;
 use Noitran\Patterns\Creational\Singleton\Exceptions\UnserializeNotSupportedException;
-use PHPUnit\Framework\TestCase;
 use Noitran\Patterns\Creational\Singleton\Logger;
+use PHPUnit\Framework\TestCase;
 
 class LoggerTest extends TestCase
 {
     /**
      * @test
      */
-    public function itShouldTestLoggerInstances(): void
+    public function it_should_test_logger_instances(): void
     {
         $firstInstance = Logger::getInstance();
         $secondInstance = Logger::getInstance();
@@ -26,7 +26,7 @@ class LoggerTest extends TestCase
     /**
      * @test
      */
-    public function itCantBeCloned(): void
+    public function it_cant_be_cloned(): void
     {
         $this->expectException(CloneNotSupportedException::class);
 
@@ -37,7 +37,7 @@ class LoggerTest extends TestCase
     /**
      * @test
      */
-    public function itCantBeUnserialized(): void
+    public function it_cant_be_unserialized(): void
     {
         $this->expectException(UnserializeNotSupportedException::class);
 

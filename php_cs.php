@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return PhpCsFixer\Config::create()
     ->setRules([
         // General fixers
@@ -88,14 +90,7 @@ return PhpCsFixer\Config::create()
             'align_double_arrow' => false,
         ],
         'trailing_comma_in_multiline_array' => true,
-        'blank_line_before_statement' => [
-            'break',
-            'continue',
-            'declare',
-            'return',
-            'throw',
-            'try',
-        ],
+        'no_empty_comment' => false,
     ])
     ->setRiskyAllowed(false)
     ->setFinder(

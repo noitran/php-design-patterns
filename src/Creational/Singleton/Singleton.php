@@ -25,9 +25,9 @@ abstract class Singleton
 
     /**
      * https://www.php.net/manual/en/language.oop5.magic.php
-     * __sleep() method is called before serialize() and __wakeup() method is called before unserialize()
+     * __sleep() method is called before serialize() and __wakeup() method is called before unserialize().
      */
-    public function __wakeup()
+    public function __wakeup(): void
     {
         throw new UnserializeNotSupportedException('Can\'t unserialize singleton');
     }
@@ -53,7 +53,7 @@ abstract class Singleton
         $subClass = static::class;
 
         if (! isset(self::$instances[$subClass])) {
-            self::$instances[$subClass] = new static;
+            self::$instances[$subClass] = new static();
         }
 
         return self::$instances[$subClass];

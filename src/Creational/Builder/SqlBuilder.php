@@ -13,24 +13,24 @@ abstract class SqlBuilder implements Builder
 
     public function __construct(Query $query = null)
     {
-        $this->query = $query ?: new Query;
+        $this->query = $query ?: new Query();
     }
 
-    public function select($columns = ['*']): SqlBuilder
+    public function select($columns = ['*']): self
     {
         $this->query->columns = $columns;
 
         return $this;
     }
 
-    public function from(string $table): SqlBuilder
+    public function from(string $table): self
     {
         $this->query->from = $table;
 
         return $this;
     }
 
-    public function where($column, $value = null, $operator = null): SqlBuilder
+    public function where($column, $value = null, $operator = null): self
     {
         $this->query->wheres[] = [
             'column' => $column,
@@ -41,14 +41,14 @@ abstract class SqlBuilder implements Builder
         return $this;
     }
 
-    public function limit(int $limit): SqlBuilder
+    public function limit(int $limit): self
     {
         $this->query->limit = $limit;
 
         return $this;
     }
 
-    public function offset(int $offset): SqlBuilder
+    public function offset(int $offset): self
     {
         $this->query->offset = $offset;
 
@@ -63,7 +63,7 @@ abstract class SqlBuilder implements Builder
     protected function concatenate($segments): string
     {
         return implode(' ', array_filter($segments, static function ($value) {
-            return (string) $value !== '';
+            return '' !== (string) $value;
         }));
     }
 
@@ -71,7 +71,7 @@ abstract class SqlBuilder implements Builder
     {
         $original = $query->columns;
 
-        if (is_null($query->columns)) {
+        if (null === $query->columns) {
             $query->columns = ['*'];
         }
 
@@ -88,7 +88,7 @@ abstract class SqlBuilder implements Builder
         $sql = [];
 
         foreach ($this->query->getSelectComponents() as $component) {
-            if (! is_null($query->$component)) {
+            if (null !== $query->$component) {
                 $method = 'compile' . ucfirst($component);
 
                 $sql[$component] = $this->$method($query, $query->$component);
@@ -110,7 +110,7 @@ abstract class SqlBuilder implements Builder
 
     protected function compileWheres(Query $query): string
     {
-        if (is_null($query->wheres)) {
+        if (null === $query->wheres) {
             return '';
         }
 

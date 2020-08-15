@@ -15,7 +15,7 @@ class PrototypeTest extends TestCase
     /**
      * @test
      */
-    public function itShouldSuccessfullyCloneObject(): void
+    public function it_should_successfully_clone_object(): void
     {
         $income = new Income();
         $income->setCurrency('EUR');

@@ -6,7 +6,7 @@ namespace Noitran\Patterns\Creational\Builder;
 
 /**
  * Interface defines a set of methods for building sql queries. Public methods are returning
- * SqlBuilder object in its current state for easy chaining
+ * SqlBuilder object in its current state for easy chaining.
  */
 interface Builder
 {

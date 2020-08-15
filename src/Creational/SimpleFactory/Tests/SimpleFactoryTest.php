@@ -16,7 +16,7 @@ class SimpleFactoryTest extends TestCase
     /**
      * @test
      */
-    public function itShouldSuccessfullyReturnClassFromFactory(): void
+    public function it_should_successfully_return_class_from_factory(): void
     {
         $config = Config::getInstance();
         $config->set('channels', [

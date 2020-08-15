@@ -15,7 +15,7 @@ class FactoryMethodTest extends TestCase
     /**
      * @test
      */
-    public function itShouldCreateStreamLogger(): void
+    public function it_should_create_stream_logger(): void
     {
         $logger = (new StreamLoggerFactory())->createLogger();
 
@@ -25,7 +25,7 @@ class FactoryMethodTest extends TestCase
     /**
      * @test
      */
-    public function itShouldCreateSlackLogger(): void
+    public function it_should_create_slack_logger(): void
     {
         $logger = (new SlackLoggerFactory())->createLogger();
 
