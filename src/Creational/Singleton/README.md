@@ -11,6 +11,16 @@ Creational design pattern which ensures that only one object of its kind exists 
 
 [Design Patterns in PHP: Singletons - Allan MacGregor](https://coderoncode.com/posts/design-patterns-in-php-singletons)
 
+## Applications
+
+I wouldn't use Singleton pattern in real world. You don't need to ensure singularity of singleton when you are going to instantiate object only once. You dont need to provide a Global Access Point when you can inject the object. At example frameworks provide Containers in which there is Singleton imitation if needed:
+
+[Service Container - Laravel](https://laravel.com/docs/7.x/container)
+
+[The PHP League PSR11 Container](https://container.thephpleague.com/3.x/)
+
+Examples mentioned by others: `Database Connector`, `Filesystem`, `Config`, `EventDispatcher`, `Logger` and other. When application requires only one instance of class in code which will be shared over all codebase in global state.
+
 ## Drawbacks
 
 1. **Singleton solves two problems - and because of this it violates Single Responsibility Principle.**
@@ -59,9 +69,9 @@ Creational design pattern which ensures that only one object of its kind exists 
 	
 	class QueryBuilder
 	{
-		protected Connection $db;
+		protected ConnectionInterface $db;
 			
-		public function __construct(Connection $db)
+		public function __construct(ConnectionInterface $db)
 		{
 			$this->db = $db;
 		}
@@ -82,18 +92,10 @@ Creational design pattern which ensures that only one object of its kind exists 
 
 3. Makes impossible to use asynchronous libraries like ReactPHP based [PPM - PHP Process Manager](https://github.com/php-pm/php-pm) as Singletons can't be cloned over two or more CPU cores, and this restricts performance increase in high load applications.
 
-## Applications
 
-I wouldn't use Singleton pattern in real world. You don't need to ensure singularity of singleton when you are going to instantiate object only once. You dont need to provide a Global Access point when you can inject the object. At example frameworks provide Containers in which there is Singleton imitation if needed:
+## Useful Links
 
-[Service Container - Laravel](https://laravel.com/docs/7.x/container)
+[1.7. Singleton — DesignPatternsPHP 1.0 documentation](https://designpatternsphp.readthedocs.io/en/latest/Creational/Singleton/README.html)
 
-[The PHP League PSR11 Container](https://container.thephpleague.com/3.x/)
-
-Examples mentioned by others: `Database Connector`, `Filesystem`, `Config`, `EventDispatcher`, `Logger` and other. When application requires only one instance of class in code which will be shared over all codebase in global state.
-
-
-
-
-
+[Design Patterns in PHP: Singletons - Allan MacGregor](https://coderoncode.com/posts/design-patterns-in-php-singletons)
 
