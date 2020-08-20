@@ -7,12 +7,13 @@
 
 There are two variations of Builder pattern:
 
-1. **Classical Builder Pattern** - Builder with steps that can be called separatley and after each step final object can be built, unlike in Fluent Builder Pattern where you need to create the object in sequence by calling each setter method one after another until all required attributes are set.
-2. **Fluent Builder Pattern** - I found that there are a lot of misunderstandings, but in my opinion this is just a Creational [Builder Pattern](https://en.wikipedia.org/wiki/Builder_pattern) with attached Structural [Fluent Interface Pattern](https://en.wikipedia.org/wiki/Fluent_interface)
+1. **Classical Builder Pattern** - Builder with steps that can be called separately. After each step, the final object can be built, unlike in the Fluent Builder Pattern, where you need to create the object in sequence by calling each setter method one after another until all required attributes are set.
+
+2. **Fluent Builder Pattern** - I found that there are a lot of misunderstandings, but in my opinion, this is just a Creational [Builder Pattern](https://en.wikipedia.org/wiki/Builder_pattern) with the attached Structural [Fluent Interface Pattern](https://en.wikipedia.org/wiki/Fluent_interface).
 
 ## Applications
 
-Builder pattern is good for creating complex products, where product stands for anything, for example a sql query *(select, from, where order by get...)*, or search query request *(author, title, date...)* with different filters. In this pattern building process is managed by director (optional, can be swapped directly with client) and builder.
+The builder pattern is good for creating complex products, where the product stands for anything, for example, a SQL query *(select, from, where order by get...)*, or search query request *(author, title, date...)* with different filters. In this pattern, building process is managed by the director (optional, can be swapped directly with a client) and builder.
 
 * [Laravel](https://laravel.com/docs/7.x/queries), [Doctrine](https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/reference/query-builder.html) and other Query Builders
 * [PHPUnit Mock Builder](https://phpunit.de/manual/6.5/en/test-doubles.html)

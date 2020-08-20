@@ -5,15 +5,13 @@
 > Ensure a class only has one instance and provide a global point of access to it.  
 > *Design Patterns: Elements of Reusable Object-Oriented Software, p. 144*
 
-Creational design pattern which ensures that only one object of its kind exists and provides a single point of access to it for any other code.
-
-**Many resources mentions that Singleton is considered as anty pattern and should be avoided in prior to Dependency Injection pattern.**
+**Many resources mention that Singleton is considered an anti-pattern and should be avoided prior to the Dependency Injection pattern.**
 
 [Design Patterns in PHP: Singletons - Allan MacGregor](https://coderoncode.com/posts/design-patterns-in-php-singletons)
 
 ## Applications
 
-I wouldn't use Singleton pattern in real world. You don't need to ensure singularity of singleton when you are going to instantiate object only once. You dont need to provide a Global Access Point when you can inject the object. At example frameworks provide Containers in which there is Singleton imitation if needed:
+I wouldn't use the Singleton pattern in the real world. You don't need to ensure the singularity of singleton when you are going to instantiate object only once. You don't need to provide a Global Access Point when you can inject the object. At example, frameworks provide Containers in which there is Singleton imitation if needed:
 
 [Service Container - Laravel](https://laravel.com/docs/7.x/container)
 
@@ -30,11 +28,11 @@ Examples mentioned by others: `Database Connector`, `Filesystem`, `Config`, `Eve
 	> Singleton objects are responsible of both their purpose and controlling the number of instances the produce, while the Single Responsibility Principle states that:  
 	> … every class should have a single responsibility, and that responsibility should be entirely encapsulated by the class.
 	
-	But in my opinion this can be avoided by using abstract singletons and subclassing, which is shown in my example, when parent singleton takes instance count controlling and child singletons are responsible for business logic. But still responibilities are strongly coupled through inheritance...
+	But in my opinion, this can be avoided by using abstract singletons and subclassing, which is shown in my example, when parent singleton takes instance count controlling and child singletons are responsible for business logic. But still, responsibilities are strongly coupled through inheritance...
 
-2. Impossible to unit test client code if using Singleton in classical way by calling ::getInstance(), and brakes **Dependency Inversion Principle (DIP)**
+2. Impossible to unit test client code if classically using Singleton by calling ::getInstance(), and brakes **Dependency Inversion Principle (DIP)**
 
-	At example if QueryBuilder class will use Singleton DB connector, which will be called via getInstance(), then it will be impossible to unit test QueryBuilder class without actually touching the database.
+	For example, if the QueryBuilder class will use Singleton DB connector, which will be called via getInstance(), then it will be impossible to unit test the QueryBuilder class without actually touching the database.
 
 	```php
 	<?php
