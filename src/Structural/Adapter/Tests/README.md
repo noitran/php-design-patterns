@@ -28,3 +28,11 @@ Abstract class or Interface. The Adapter can extend this class and overwrite all
 [2.1. Adapter / Wrapper — DesignPatternsPHP 1.0 documentation](https://designpatternsphp.readthedocs.io/en/latest/Structural/Adapter/README.html)
 
 [GitHub - jolicode/slack-php-api: PHP Slack Client based on the official OpenAPI specification](https://github.com/jolicode/slack-php-api)
+
+
+## Videos
+
+[Design Patterns in PHP: Gettin' Jiggy With Adapters](https://laracasts.com/series/design-patterns-in-php/episodes/2)
+
+[Adapter Pattern – Design Patterns (ep 8) - YouTube](https://www.youtube.com/watch?v=2PKQtcJjYvc)
+
