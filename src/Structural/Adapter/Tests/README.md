@@ -9,6 +9,9 @@
 
 Adapter pattern allows us to use third-party or legacy code libraries even if they aren't compatible with the existing codebase. For example, instead of rewriting existing notification functionality to connect slack, Facebook, or SMS to existing email notifications, you can create adapter classes that will act as middleware between existing codebase and third-party libraries.
 
+* [https://github.com/illuminate/filesystem/blob/master/FilesystemAdapter.php](https://github.com/illuminate/filesystem/blob/master/FilesystemAdapter.php) - Adapter from laravel for [thephpleague/flysystem](https://github.com/thephpleague/flysystem).   
+Using adapters allows us to use the same interface for local, amazon dropbox, and other drivers.
+
 ## Structure
 
 * **Client:** Existing codebase that can consist of one or more classes that expect Target class. The Client might be more than just one class.
