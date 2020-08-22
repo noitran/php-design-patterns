@@ -2,7 +2,7 @@
 
 ## About
 
-> Convert the interface of a class into another interface that the clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.
+> Convert the interface of a class into another interface that the clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.  
 > *Design Patterns: Elements of Reusable Object-Oriented Software, p. 157*
 
 ## Applications
